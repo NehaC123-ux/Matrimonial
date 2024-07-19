@@ -1,0 +1,66 @@
+
+  <div class="container mt-5">
+    
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead class="bg-primary text-white">
+
+            <tr>
+              <th scope="col">ProfileId</th>
+              <th scope="col">Location</th>
+              <th scope="col">Religion</th>
+              <th scope="col">Age</th>
+              <th scope="col">MaritalStatus</th>
+              <th scope="col">Height</th>
+              <th scope="col">Caste</th>
+              <th scope="col">Complexion</th>
+              <th scope="col">SubCaste</th>
+              <th scope="col">HomeLocation</th>
+              <th scope="col">Gotra</th>
+              <th scope="col">District</th>
+              <th scope="col">Qualification</th>
+              <th scope="col">State</th>
+              <th scope="col">Profession</th>
+              <th scope="col">Country</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Registration of newRegistrationList">
+              <td>{{Registration.profileId}}</td>
+              <td>{{Registration.location}}</td>
+              <td>{{Registration.religion}}</td>
+              <td>{{Registration.age}}</td>
+              <td>{{Registration.maritalStatus}}</td>
+              <td>{{Registration.height}}</td>
+              <td>{{Registration.caste}}</td>
+              <td>{{Registration.complexion}}</td>
+              <td>{{Registration.subCasteMaster}}</td>
+              <td>{{Registration.homeLocation}}</td>
+              <td>{{Registration.gotraMaster}}</td>
+              <td>{{Registration.districtMaster}}</td>
+              <td>{{Registration.qualificationMaster}}</td>
+              <td>{{Registration.stateMaster}}</td>
+              <td>{{Registration.professionMaster}}</td>
+              <td>{{Registration.countryMaster}}</td>
+              <td><img src={{filepath+Registration.profileName}}></td>
+              <td><img src={{filepath+Registration.profileName1}}></td>
+              <td><img src={{filepath+Registration.profileName2}}></td>
+              <td>
+                <button type="button"  style="margin: 2px;" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                  </svg>Edit</button>
+                <button type="button"  style="margin: 2px;" class="btn btn-danger">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                    <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0z"/>
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6z"/>
+                  </svg>Delete</button>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close">
+    <span aria-hidden="true" (click)="closePop()">×</span>
+  </button>
+</div>
+<div class="modal-body">
+ <form class="row g-3 "  [formGroup]="firstDemo" (ngSubmit)="clickPostData()">
+    <div class="col-md-12 position-relative">
+      <label for="validationTooltip03" class="form-label">CountryName:</label>
+      <input type="text" class="form-control" id="validationTooltip03" formControlName="CountryName">
+      <div style="color: red;" *ngIf="firstDemo.get('CountryName')?.hasError('required') && firstDemo.get('CountryName')?.touched">
+        <small>Country name is valid!!!!!!</small>
+      </div>
+     
+    </div>
+     
+
+    <div class="col-md-12 position-relative">
+      <label for="exampleFormControlSelect1">Status:</label>
+      <select class="form-control" id="exampleFormControlSelect1" formControlName="Status"
+        [ngClass]="{'is-invalid':submitted&&firstDemo.controls['Status'].errors}">
+        <option>True</option>
+        <option>False</option>
+      </select>
+      <div *ngIf="submitted&&firstDemo.controls['Status'].errors" class="invalid-feedback">
+        enter valid status!!
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary ml-1" (click)="closePop()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+          <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098z"/>
+        </svg>Close</button>
+      <button class="btn btn-danger ml-1" [disabled]="firstDemo.invalid" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-subtract" viewBox="0 0 16 16">
+          <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+        </svg>Submit</button>
+
+    </div>
+  </form>
+
+</div>
+<!-- <app-country-master-list ></app-country-master-list> -->

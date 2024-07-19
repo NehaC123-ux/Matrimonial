@@ -1,0 +1,52 @@
+<div  class="container">
+   
+    
+            <div class="modal-header" >
+               <h4 class="modal-title pull-left">Enquiry Now</h4>
+               <button type="button" class="close pull-right" aria-label="Close" >
+                  <span aria-hidden="true" (click)="closepopup()">×</span>
+               </button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="enquiryForm" (ngSubmit)="clickEnquiry()">
+                 <div class="mb-3 form-group row">
+                    <label for="disabledTextInput" class="form-label">Name:</label>
+                    <input type="text" id="validationTooltip03"class="form-control" formControlName="enquiryName"  placeholder="Enter your Name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Mobile:</label>
+                    <input type="text" id="validationTooltip03"class="form-control" formControlName="mobileNo"  placeholder="Phone No..">
+                  </div>
+                  <div class="mb-3">
+                     <label for="disabledTextInput" class="form-label">Enquiry For:</label>
+                     <input type="text" id="validationTooltip03"class="form-control" formControlName="enquiryFor" >
+                   </div>
+                 <div class="mb-3">
+                   <label for="exampleInputEmail1" class="form-label">Email address</label>
+                   <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" placeholder="Enter your email" >
+                 </div>
+                 <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Gender:</label>
+                      Male<input type="radio" id="Male"  value="M" Name="Gender"  >
+                       Female<input type="radio" id="Female" value="F" Name="Gender" > 
+                  </div>
+                  <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">DOB:</label>
+                    <input type="date" id="validationTooltip03"class="form-control" formControlName="dob" >
+                  </div>
+                 <div class="modal-footer">
+                    
+                    <button  class="btn btn-success" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-subtract" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                      </svg>Submit</button>
+                   
+                 </div>
+               </form> 
+            </div>
+      
+   </div>
+
+
+
+
